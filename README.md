@@ -32,7 +32,7 @@ inline int add(int a, int b) {
 ---
 <h3 id="4">4.使用迭代器可能比使用指针更优</h3>
 
-### 在遍历一个STL溶剂的时候，使用迭代器会优于用for循环的方式取值，减少程序控制循环的开销
+### 在遍历一个STL容器的时候，使用迭代器会优于用for循环的方式取值，减少程序控制循环的开销
 ```
 #include <vector>
 #include <iostream>
