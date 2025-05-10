@@ -86,5 +86,5 @@ void removeCtrlRefResultIt(char* destp, const char* srcp, size_t size) {
 }
 ```
 ## 性能总结
-![](./xn.png)
+![](xn.png)
 
