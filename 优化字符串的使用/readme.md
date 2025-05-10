@@ -88,3 +88,4 @@ void removeCtrlRefResultIt(char* destp, const char* srcp, size_t size) {
 ## 性能总结
 ![](xn.png)
 
+# 声明（本案例仅供个人学习，具体内容参考C++性能优化指南）
