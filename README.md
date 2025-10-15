@@ -81,8 +81,8 @@ void example() {
 constexpr int N = 1e8;
 #if 0
 void test() {
-    int *cache = new int;
-    for (int i = 0; i < 100000000; ++i) {
+    int *cache = new int; // 简单内存池用法
+    for (int i = 0; i < N; ++i) {
         int *ptr = cache;
         *ptr = i;
     }
@@ -91,7 +91,7 @@ void test() {
 #else
 
 void test() {
-    for (int i = 0; i < 100000000; ++i) {
+    for (int i = 0; i < N; ++i) {
         int* ptr = new int;
         *ptr = i;
         delete ptr;
