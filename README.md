@@ -77,6 +77,7 @@ void example() {
 
 ```
 - ### 2.内存池预分配
+```
 constexpr int N = 1e8;
 #if 0
 void test() {
@@ -97,6 +98,7 @@ void test() {
     }
 }
 #endif
+```
 - ### 3.内存对齐,CPU 更擅长访问对齐的数据，所以尽量让结构体的字段按对齐规则排列。
 ```
 struct AlignedStruct {
