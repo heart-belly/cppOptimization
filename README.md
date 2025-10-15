@@ -9,7 +9,6 @@
 ## [7.使用编译器自带的优化选项](#7)
 ## [8.内存管理](#8)
 ## [9.多线程并发](#9)
-### [9.多线程并发](#9)
 ---
 <h3 id="1">1.使用const关键字</h3>
 
@@ -78,6 +77,26 @@ void example() {
 
 ```
 - ### 2.内存池预分配
+constexpr int N = 1e8;
+#if 0
+void test() {
+    int *cache = new int;
+    for (int i = 0; i < 100000000; ++i) {
+        int *ptr = cache;
+        *ptr = i;
+    }
+    delete cache;
+}
+#else
+
+void test() {
+    for (int i = 0; i < 100000000; ++i) {
+        int* ptr = new int;
+        *ptr = i;
+        delete ptr;
+    }
+}
+#endif
 - ### 3.内存对齐,CPU 更擅长访问对齐的数据，所以尽量让结构体的字段按对齐规则排列。
 ```
 struct AlignedStruct {
